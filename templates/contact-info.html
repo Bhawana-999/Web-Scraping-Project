@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/home.css" />
+    <title>Contact Information</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a  href="/">Home</a>
+      <a href="/browse_jobs">Browse Jobs</a>
+      <a class="active">Contact</a>
+      
+  </div>
+   
+    <div class="contact-container">
+      <div style="text-align: center; margin-bottom: 2%">
+        <h2>Contact Us</h2>
+        <p>Swing by for a cup of coffee, or leave us a message:</p>
+      </div>
+
+      <div class="contact-box">
+        <form >
+          <label for="name">First Name</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Your name...."
+          />
+          <br />
+          <label for="email">Email</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter Your Email...."
+          />
+          <br />
+          <label for="subject">Your Question</label><br />
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write Your Question here....."
+            style="height: 170px"
+          ></textarea>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>

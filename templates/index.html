@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/home.css" />
+    <title>IT related jobs</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a  href="/">Home</a>
+      <a class="active">Browse Jobs</a>
+      <a href="/contact">Contact</a>
+    
+  </div>
+  
+
+    <p>These are the currently active IT&Telecommunication jobs.</p>
+    <p>
+      These data are scraped from multiple online job portals of Nepal with the
+      help of BeautifulSoup.
+    </p>
+
+    <table id="jobs">
+      <tr>
+        <th>Company Name</th>
+        <th>Job Title</th>
+        <th>Other Details</th>
+      </tr>
+      {% for title, company, apply_link in job_data %}
+
+      <tr>
+        <td>{{company}}</td>
+        <td>{{title}}</td>
+        <td><a href="{{ apply_link }}">More-Info</a></td>
+      </tr>
+
+      {% endfor %}
+      
+    </table>
+    {% include 'footer.html' %}
+  </body>
+</html>
